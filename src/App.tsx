@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/*
+ * @Author: Wisszeix
+ * @Date: 2021-10-17 14:18:24
+ * @LastEditTime: 2021-10-17 15:48:04
+ * @LastEditors: Wisszeix
+ * @Description: root element
+ * @FilePath: \Draggable-App\src\App.tsx
+ */
+import { Switch, BrowserRouter, Route, Redirect } from "react-router-dom";
+import Landing from "Views/Landing";
+import Home from "Views/Home";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<BrowserRouter>
+				<Switch>
+					<Route exact path="/">
+						<Redirect to="/landing"></Redirect>
+					</Route>
+					<Route path="/landing" component={Landing} />
+					<Route path="/home" component={Home} />
+				</Switch>
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;

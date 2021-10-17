@@ -1,0 +1,18 @@
+.box {
+	width: 8vw;
+	flex-direction: column;
+	display: flex;
+	justify-content: space-between;
+	height: 25vh;
+	text-align: center;
+}
+.box > :first-child {
+	line-height: 3vh;
+	height: 3vh;
+	width: inherit;
+}
+.box > :last-child {
+	width: inherit;
+	align-self: flex-end;
+	height: 20vh;
+}
