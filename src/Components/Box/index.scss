@@ -11,8 +11,38 @@
 	height: 3vh;
 	width: inherit;
 }
+
 .box > :last-child {
 	width: inherit;
 	align-self: flex-end;
 	height: 20vh;
+
+	input,
+	.item {
+		margin-top: 1vh;
+		width: 80%;
+		text-align: center;
+	}
+	button {
+		cursor: pointer;
+		background-color: inherit;
+		border: none;
+		border-radius: 50%;
+	}
+
+	.item {
+		margin: 0 auto;
+		margin-top: 1vh;
+		align-items: center;
+		border: 1px black solid;
+		background-color: white;
+		.close-icon {
+			transform: translate(50%, -50%);
+			border-radius: 50%;
+			background-color: red;
+		}
+	}
+}
+.drag-enter {
+	border: 1px #8ee5ee solid;
 }
